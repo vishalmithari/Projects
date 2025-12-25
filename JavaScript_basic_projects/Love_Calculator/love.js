@@ -1,0 +1,15 @@
+const form= document.querySelector("form");
+
+form.addEventListener("submit",(e)=>{
+    e.preventDefault();
+    const boy= document.querySelector("#boy");
+    const girl= document.querySelector("#girl");
+
+    const l1= boy.value.length;
+    const l2= girl.value.length;
+
+    const result=((l1+l2)*8)%101;
+
+    document.querySelector("h2").textContent=`Result: ${result}%`;
+    form.reset();
+})
